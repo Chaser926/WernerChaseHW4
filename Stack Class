@@ -5,3 +5,9 @@ else
 set temp to head
 newNode.setNext(temp)
 head = newNode
+
+public Node pop(){
+Node tmp = this.top;
+this.top = top.next;
+return tmp;
+}

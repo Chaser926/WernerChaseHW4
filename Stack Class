@@ -1,1 +1,7 @@
 //This is the beginning of the strack class
+
+if empty, set head to newNode
+else
+set temp to head
+newNode.setNext(temp)
+head = newNode

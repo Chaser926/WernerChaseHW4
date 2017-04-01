@@ -12,3 +12,5 @@ Node tmp = this.top;
 this.top = top.next;
 return tmp;
 }
+
+peek method

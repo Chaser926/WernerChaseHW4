@@ -1,5 +1,6 @@
 //This is the beginning of the strack class
 
+//push method
 if empty, set head to newNode
 else
 set temp to head

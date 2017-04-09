@@ -44,3 +44,39 @@ public class Queue
       return temp;
     }
   }
+  //This method returns the first node 
+  public Node peek()
+  {
+    if(first == null)
+    {
+      return null;
+    }
+    
+    else
+    {
+    return first;
+    }
+  }
+  //Method prints the queue
+  public void print()
+  {
+    //if the queue is empty print out that it is empty
+    if(first == null)
+    {
+      System.out.println("The Queue is empty.");
+    }
+    //Prints the queue
+    else
+    {
+      Node curr = first;
+      System.out.print("Queue entries: ");
+      while(curr != null)
+      {
+        System.out.print(curr.getValue() + ", ");
+        curr = curr.getNext();
+      }
+      System.out.println("\n");
+    }
+  }
+}
+      

@@ -7,6 +7,25 @@ public static void stackToQueue(Stack st, Queue qu)
     }
     System.out.println("Put the stack into a queue");
   }
+  
+  //method transferring items in queue to a stack
+  public static void queueToStack(Queue qu, Stack st)
+  {
+    //creates temp stack
+    Stack tempSt = new Stack();
+    //put nodes in queue into the temp stack
+    while(qu.peek() != null)
+    {
+      tempSt.push(qu.dequeue());
+    }
+    //reverse the order by putting the stack into another stack
+    while(tempSt.peek() != null)
+    {
+     st.push(tempSt.pop());
+    }
+    System.out.println("Put the queue into a stack");
+  }
+  
 
 public static void main(String[] args)
   {

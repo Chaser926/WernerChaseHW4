@@ -1,0 +1,14 @@
+public void enqueue(Node n)
+  {
+    if(first == null)
+    {
+      first = n;
+      last = n;
+    }
+    
+    else
+    {
+      last.setNext(n);
+      last = n;
+    }
+  }

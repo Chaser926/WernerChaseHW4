@@ -1,3 +1,13 @@
+public static void stackToQueue(Stack st, Queue qu)
+  {
+    while(st.peek() != null)
+    {
+      //adds the top of stack to the queue
+      qu.enqueue(st.pop());
+    }
+    System.out.println("Put the stack into a queue");
+  }
+
 public static void main(String[] args)
   {
     Stack stack1 = new Stack();

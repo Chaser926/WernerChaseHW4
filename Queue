@@ -1,4 +1,21 @@
-public void enqueue(Node n)
+public class Queue
+{
+  Node first;
+  Node last;
+  
+  public Queue()
+  {
+    first = null;
+    last = null;
+  }
+  
+  public Queue(Node n)
+  {
+    first = n;
+    last = first;
+  }
+  //method to add to the end of the queue
+  public void enqueue(Node n)
   {
     if(first == null)
     {
@@ -10,5 +27,20 @@ public void enqueue(Node n)
     {
       last.setNext(n);
       last = n;
+    }
+  }
+  //Method takes out the first node
+  public Node dequeue()
+  {
+    if(first == null)
+    {
+      return null;
+    }
+    
+    else
+    {
+      Node temp = new Node(first.getValue());
+      first = first.getNext();
+      return temp;
     }
   }

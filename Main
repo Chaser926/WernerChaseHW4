@@ -1,1 +1,40 @@
-Began main
+public static void main(String[] args)
+  {
+    Stack stack1 = new Stack();
+    Queue queue1 = new Queue();
+    Stack stack2 = new Stack();
+    
+    //create nodes
+    Node node0 = new Node("Apple");
+    Node node1 = new Node("Banana");
+    Node node2 = new Node("Pear");
+    Node node3 = new Node("Dragonfruit");
+    Node node4 = new Node("Pineapple");
+    Node node5 = new Node("Grape");
+    Node node6 = new Node("Watermelon");
+    
+    //push nodes into stack
+    stack1.push(node0);
+    stack1.push(node1);
+    stack1.push(node2);
+    stack1.push(node3);
+    stack1.push(node4);
+    stack1.push(node5);
+    stack1.push(node6);
+    
+    //print the stack
+    stack1.print(); 
+    
+    stackToQueue(stack1, queue1);
+    stack1.print();
+    queue1.print();
+    
+    queueToStack(queue1, stack1);
+    queue1.print();
+    stack1.print();
+    
+    stackToStack(stack1, stack2);
+    stack1.print();
+    stack2.print();
+  }
+}

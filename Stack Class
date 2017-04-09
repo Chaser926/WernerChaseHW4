@@ -1,16 +1,83 @@
-//This is the beginning of the strack class
-
-//push method
-if empty, set head to newNode
-else
-set temp to head
-newNode.setNext(temp)
-head = newNode
-
-public Node pop(){
-Node tmp = this.top;
-this.top = top.next;
-return tmp;
+public class Stack
+{
+  //creates top node
+  Node top;
+  
+  //Constructor
+  public Stack()
+  {
+    top = null;
+  }
+  
+  public Stack(Node n)
+  {
+    top = n;
+  }
+  
+  //push method to add nodes to the top of the stack
+  public void push(Node n)
+  {
+    //check to see if list is empty
+    if(top == null)
+    {
+      top = n;
+    }
+    
+    else
+    {
+      //adds n to top
+      n.setNext(top);
+      top = n;
+    }
+  }
+  
+  //pop method removes and returns the top
+  public Node pop()
+  {
+    if(top == null)
+    {
+      return null;
+    }
+   
+    else
+    {
+      //remove and return the top node
+      Node curr = new Node(top.getValue());
+      top = top.getNext();
+      return curr;
+    }
+  }
+  //peek method returns the top node
+  public Node peek()
+  {
+    if(top == null)
+    {
+      return null;
+    }
+    
+    else
+    {
+      return top;
+    }
+  }
+  //prints the stack
+  public void print()
+  {
+    if(top == null)
+    {
+      System.out.println("The stack is empty.");
+    }
+    //If the stack isnt empty, it prints the stack
+    else
+    {
+      Node curr = top;
+      System.out.print("Stack entries: ");
+      while(curr != null)
+      {
+        System.out.print(curr.getValue() + ", ");
+        curr = curr.getNext();
+      }
+      System.out.println("\n");
+    }
+  }
 }
-
-peek method

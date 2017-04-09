@@ -1,4 +1,7 @@
-public static void stackToQueue(Stack st, Queue qu)
+public class Main
+{
+  //Stack to queue method
+  public static void stackToQueue(Stack st, Queue qu)
   {
     while(st.peek() != null)
     {
@@ -26,7 +29,7 @@ public static void stackToQueue(Stack st, Queue qu)
     System.out.println("Put the queue into a stack");
   }
   
-   //method that puts a stack into another stack 
+  //method that puts a stack into another stack 
   public static void stackToStack(Stack s, Stack st)
   { 
     //creats a second stack
@@ -45,8 +48,7 @@ public static void stackToQueue(Stack st, Queue qu)
     System.out.println("Put the stack into a different stack");
   }
   
-
-public static void main(String[] args)
+  public static void main(String[] args)
   {
     Stack stack1 = new Stack();
     Queue queue1 = new Queue();
